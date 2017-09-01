@@ -35,6 +35,7 @@ import {
 
 // get
 import getWindowHeight from './getWindowHeight'
+import randomString from './randomString'
 
 // date
 import {
@@ -88,4 +89,5 @@ export {
   getNextMonth,
   clearHours,
   getYYYYMMDD,
+  randomString,
 }
