@@ -20,6 +20,7 @@ import hasChinese from './hasChinese'
 // 操作类
 import clone from './clone'
 import queryClone from './queryClone'
+import formatMoney from './formatMoney'
 
 // 判断类
 import hasOwn from './hasOwn'
@@ -71,6 +72,7 @@ export {
   hasChinese,
   clone,
   queryClone,
+  formatMoney,
   hasOwn,
   hasClass,
   addClass,

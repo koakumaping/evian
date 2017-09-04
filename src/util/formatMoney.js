@@ -9,7 +9,9 @@
 * @author Ping YF (koakumaping@163.com)
 */
 
-// 可能有兼容性问题
-const formatMoney = (money) => money.toLocaleString('en-US')
+// 先提取整数部分
+const formatMoney = (value) => value.toString().replace(/\d+/, (n) =>
+  n.replace(/(\d)(?=(\d{3})+$)/g, ($1) => `${$1},`),
+)
 
 export default formatMoney
