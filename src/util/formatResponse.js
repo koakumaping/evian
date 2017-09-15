@@ -11,7 +11,7 @@
 import clone from './clone'
 import hasOwn from './hasOwn'
 
-const reFormateResponse = (list = []) => {
+const formatResponse = (list = []) => {
   const _list = []
   for (let i = 0, l = list.length; i < l; ++i) {
     // 创建新的一行
@@ -31,4 +31,4 @@ const reFormateResponse = (list = []) => {
   return _list
 }
 
-export default reFormateResponse
+export default formatResponse
