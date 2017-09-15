@@ -8,6 +8,7 @@
 * @date 2017-09-15
 * @author Ping YF (koakumaping@163.com)
 */
+import clone from './clone'
 import hasOwn from './hasOwn'
 
 const reFormateResponse = (list = []) => {
@@ -17,6 +18,8 @@ const reFormateResponse = (list = []) => {
     const _line = {
       // 是否处于编辑状态，默认否
       edit: false,
+      // 保存一份原始数据，用于还原
+      origin: clone(list[i]),
     }
     for (const item in list[i]) {
       if (hasOwn(list[i][item], 'value')) {
