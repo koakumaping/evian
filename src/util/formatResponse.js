@@ -19,7 +19,7 @@ const formatResponse = (list = []) => {
       // 是否处于编辑状态，默认否
       edit: false,
       // 保存一份原始数据，用于还原
-      origin: clone(list[i]),
+      _origin: clone(list[i]),
     }
     for (const item in list[i]) {
       if (hasOwn(list[i][item], 'value')) {
