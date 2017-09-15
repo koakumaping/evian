@@ -53,6 +53,9 @@ import {
   getYYYYMMDD,
 } from './date'
 
+// 数据处理，定制化
+import reFormateResponse from './reFormateResponse'
+
 export {
   decode64,
   encode64,
@@ -92,4 +95,5 @@ export {
   clearHours,
   getYYYYMMDD,
   randomString,
+  reFormateResponse,
 }
