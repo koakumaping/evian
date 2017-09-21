@@ -57,6 +57,9 @@ import {
 import formatResponse from './formatResponse'
 import restoreResponse from './restoreResponse'
 
+// 定制化函数
+import getObjectFromArray from './getObjectFromArray'
+
 export {
   decode64,
   encode64,
@@ -98,4 +101,5 @@ export {
   randomString,
   formatResponse,
   restoreResponse,
+  getObjectFromArray,
 }
