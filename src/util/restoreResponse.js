@@ -18,6 +18,8 @@ const restoreResponse = (list = []) => {
     for (const item in _line) {
       if (hasOwn(_line[item], 'value')) {
         _line[item].value = list[i][item]
+      } else {
+        _line[item] = list[i][item]
       }
     }
     _list.push(_line)
