@@ -24,6 +24,8 @@ const formatResponse = (list = []) => {
     for (const item in list[i]) {
       if (hasOwn(list[i][item], 'value')) {
         _line[item] = list[i][item].value
+      } else {
+        _line[item] = list[i][item]
       }
     }
     _list.push(_line)
