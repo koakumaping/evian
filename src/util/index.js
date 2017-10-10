@@ -59,6 +59,7 @@ import restoreResponse from './restoreResponse'
 
 // 定制化函数
 import getObjectFromArray from './getObjectFromArray'
+import getDict from './getDict'
 
 export {
   decode64,
@@ -102,4 +103,5 @@ export {
   formatResponse,
   restoreResponse,
   getObjectFromArray,
+  getDict,
 }
