@@ -10,6 +10,7 @@
 */
 import clone from './clone'
 import hasOwn from './hasOwn'
+import isNumber from './isNumber'
 
 const formatResponse = (list = []) => {
   const _list = []
@@ -23,7 +24,8 @@ const formatResponse = (list = []) => {
     }
     for (const item in list[i]) {
       if (hasOwn(list[i][item], 'value')) {
-        _line[item] = list[i][item].value
+        _line[item] = isNumber(list[i][item].value) ?
+          Number(list[i][item].value) : list[i][item].value
       } else {
         _line[item] = list[i][item]
       }
