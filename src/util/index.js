@@ -16,14 +16,12 @@ import isObject from './isObject'
 import isString from './isString'
 import isNumber from './isNumber'
 import hasChinese from './hasChinese'
-
+import hasOwn from './hasOwn'
+import inOf from './inOf'
 // 操作类
 import clone from './clone'
 import queryClone from './queryClone'
 import formatMoney from './formatMoney'
-
-// 判断类
-import hasOwn from './hasOwn'
 
 // dom
 import {
@@ -82,6 +80,7 @@ export {
   queryClone,
   formatMoney,
   hasOwn,
+  inOf,
   hasClass,
   addClass,
   removeClass,
