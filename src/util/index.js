@@ -51,6 +51,9 @@ import {
   getYYYYMMDD,
 } from './date'
 
+// 转换
+import toNumber from './toNumber'
+
 // 数据处理，定制化
 import formatResponse from './formatResponse'
 import restoreResponse from './restoreResponse'
@@ -99,6 +102,7 @@ export {
   clearHours,
   getYYYYMMDD,
   randomString,
+  toNumber,
   formatResponse,
   restoreResponse,
   getObjectFromArray,
