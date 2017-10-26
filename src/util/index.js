@@ -12,6 +12,7 @@ import handleEvent from './handleEvent'
 import isPC from './isPC'
 import isFunction from './isFunction'
 import isArray from './isArray'
+import isEmptyObject from './isEmptyObject'
 import isObject from './isObject'
 import isString from './isString'
 import isNumber from './isNumber'
@@ -75,6 +76,7 @@ export {
   isPC,
   isFunction,
   isArray,
+  isEmptyObject,
   isObject,
   isString,
   isNumber,
