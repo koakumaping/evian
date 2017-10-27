@@ -28,11 +28,11 @@ const formatResponse = (list = []) => {
 
     for (const item in list[i]) {
       if (hasOwn(list[i][item], 'value')) {
+        if (hasOwn(list[i][item].value, 'rows')) {
+          list[i][item].value.rows = formatResponse(list[i][item].value.rows)
+        }
         _line[item] = isNumber(list[i][item].value) ?
           Number(list[i][item].value) : list[i][item].value
-      } else if (hasOwn(list[i][item], 'rows')) {
-        list[i][item].rows = formatResponse(list[i][item].rows)
-        _line[item] = list[i][item]
       } else {
         _line[item] = list[i][item]
       }
