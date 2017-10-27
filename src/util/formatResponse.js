@@ -11,6 +11,7 @@
 import clone from './clone'
 import hasOwn from './hasOwn'
 import isNumber from './isNumber'
+import formatePermission from './formatePermission'
 
 const formatResponse = (list = []) => {
   const _list = []
@@ -22,6 +23,9 @@ const formatResponse = (list = []) => {
       // 保存一份原始数据，用于还原
       _origin: clone(list[i]),
     }
+
+    _line.p = formatePermission(_line)
+
     for (const item in list[i]) {
       if (hasOwn(list[i][item], 'value')) {
         _line[item] = isNumber(list[i][item].value) ?

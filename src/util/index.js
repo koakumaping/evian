@@ -57,6 +57,7 @@ import toNumber from './toNumber'
 
 // 数据处理，定制化
 import formatResponse from './formatResponse'
+import formatePermission from './formatePermission'
 import restoreResponse from './restoreResponse'
 
 // 定制化函数
@@ -106,6 +107,7 @@ export {
   randomString,
   toNumber,
   formatResponse,
+  formatePermission,
   restoreResponse,
   getObjectFromArray,
   getDict,
