@@ -30,6 +30,9 @@ const formatResponse = (list = []) => {
       if (hasOwn(list[i][item], 'value')) {
         _line[item] = isNumber(list[i][item].value) ?
           Number(list[i][item].value) : list[i][item].value
+      } else if (hasOwn(list[i][item], 'rows')) {
+        list[i][item].rows = formatResponse(list[i][item].rows)
+        _line[item] = list[i][item]
       } else {
         _line[item] = list[i][item]
       }
