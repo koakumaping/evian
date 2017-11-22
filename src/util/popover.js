@@ -43,12 +43,12 @@ function getPopoverPosition(node, popoverNode, options = { place: 'left' }) {
   // const width = clientReact.width
   // const height = clientReact.height
   // console.log(top, left, width, height)
-  if (options.place === 'left') {
+  if (options.place === 'left' || options.place === 'top-left') {
     // console.log(_popoverNode.clientWidth, util.getStyle(_popoverNode, 'width'))
     left -= Number(_popoverNode.offsetWidth)
   }
 
-  if (options.place === 'right') {
+  if (options.place === 'right' || options.place === 'top-right') {
     left += Number(_node.offsetWidth)
   }
 

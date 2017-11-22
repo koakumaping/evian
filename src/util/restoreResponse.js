@@ -10,13 +10,14 @@
 */
 import clone from './clone'
 import hasOwn from './hasOwn'
+import isObject from './isObject'
 
 const restoreResponse = (list = []) => {
   const _list = []
   for (let i = 0, l = list.length; i < l; ++i) {
     const _line = clone(list[i]._origin)
     for (const item in _line) {
-      if (hasOwn(_line[item], 'value')) {
+      if (hasOwn(_line[item], 'value') && !isObject(_line[item].value)) {
         _line[item].value = list[i][item]
       } else {
         _line[item] = list[i][item]

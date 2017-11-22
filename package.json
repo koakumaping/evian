@@ -1,6 +1,6 @@
 {
   "name": "ct-util",
-  "version": "1.0.25",
+  "version": "1.0.29",
   "description": "util",
   "main": "dist/ctUtil.js",
   "files": [

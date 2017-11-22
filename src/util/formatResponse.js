@@ -24,7 +24,7 @@ const formatResponse = (list = []) => {
       _origin: clone(list[i]),
     }
 
-    _line.p = formatePermission(_line)
+    _line._p = formatePermission(_line)
 
     for (const item in list[i]) {
       if (hasOwn(list[i][item], 'value')) {
