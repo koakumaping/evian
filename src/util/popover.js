@@ -30,16 +30,16 @@ function getNodeClientRect(el) {
   return el.getBoundingClientRect()
 }
 
-function getPopoverPosition(node, popoverNode, options = { place: 'left' }) {
+function getPopoverPosition(node, popoverNode, options = { place: 'left' }, inbody = false) {
   const _node = isVNode(node) ? node.$el : node
   const _popoverNode = isVNode(popoverNode) ? popoverNode.$el : popoverNode
   // console.log(_node, _popoverNode)
   const relativeClientReact = getRelativeNodeClientRect(_node)
   const clientReact = getNodeClientRect(_node)
 
-  let top = clientReact.top - relativeClientReact.top
-
-  let left = clientReact.left - relativeClientReact.left
+  // inbody表示取元素跟body的top, left
+  let top = inbody ? clientReact.top : clientReact.top - relativeClientReact.top
+  let left = inbody ? clientReact.left : clientReact.left - relativeClientReact.left
   // const width = clientReact.width
   // const height = clientReact.height
   // console.log(top, left, width, height)
@@ -59,7 +59,8 @@ function getPopoverPosition(node, popoverNode, options = { place: 'left' }) {
 
   if (options.place === 'bottom') {
     top += _node.offsetHeight
-    left += (_node.offsetWidth - _popoverNode.offsetWidth) / 2
+    // 保证是正数
+    left += (Math.abs(_node.offsetWidth - _popoverNode.offsetWidth)) / 2
   }
 
   // 重新计算popover的高度，使其保证显示在元素中间
