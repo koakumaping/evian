@@ -54,13 +54,13 @@ function getPopoverPosition(node, popoverNode, options = { place: 'left' }, inbo
 
   if (options.place === 'top') {
     top -= _popoverNode.offsetHeight
-    left += (_node.offsetWidth - _popoverNode.offsetWidth) / 2
+    left += _node.offsetWidth / 2 - _popoverNode.offsetWidth / 2
   }
 
   if (options.place === 'bottom') {
     top += _node.offsetHeight
     // 保证是正数
-    left += (Math.abs(_node.offsetWidth - _popoverNode.offsetWidth)) / 2
+    left += _node.offsetWidth / 2 - _popoverNode.offsetWidth / 2
   }
 
   // 重新计算popover的高度，使其保证显示在元素中间

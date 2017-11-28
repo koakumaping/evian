@@ -14,6 +14,7 @@ import isFunction from './isFunction'
 import isArray from './isArray'
 import isEmptyObject from './isEmptyObject'
 import isObject from './isObject'
+import isBoolean from './isBoolean'
 import isString from './isString'
 import isNumber from './isNumber'
 import hasChinese from './hasChinese'
@@ -79,6 +80,7 @@ export {
   isArray,
   isEmptyObject,
   isObject,
+  isBoolean,
   isString,
   isNumber,
   hasChinese,
