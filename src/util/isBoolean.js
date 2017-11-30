@@ -10,6 +10,6 @@
 * @author Ping YF (koakumaping@163.com)
 */
 
-const isBoolean = (val) => Object.prototype.toString.call(val) === '[Boolean Boolean]'
+const isBoolean = (val) => Object.prototype.toString.call(val) === '[object Boolean]'
 
 export default isBoolean

@@ -40,15 +40,12 @@ function getPopoverPosition(node, popoverNode, options = { place: 'left' }, inbo
   // inbody表示取元素跟body的top, left
   let top = inbody ? clientReact.top : clientReact.top - relativeClientReact.top
   let left = inbody ? clientReact.left : clientReact.left - relativeClientReact.left
-  // const width = clientReact.width
-  // const height = clientReact.height
-  // console.log(top, left, width, height)
-  if (options.place === 'left' || options.place === 'top-left') {
-    // console.log(_popoverNode.clientWidth, util.getStyle(_popoverNode, 'width'))
+
+  if (options.place === 'left' || options.place === 'left-top' || options.place === 'left-bottom') {
     left -= Number(_popoverNode.offsetWidth)
   }
 
-  if (options.place === 'right' || options.place === 'top-right') {
+  if (options.place === 'right' || options.place === 'right-top' || options.place === 'right-bottom') {
     left += Number(_node.offsetWidth)
   }
 
@@ -63,10 +60,37 @@ function getPopoverPosition(node, popoverNode, options = { place: 'left' }, inbo
     left += _node.offsetWidth / 2 - _popoverNode.offsetWidth / 2
   }
 
+  if (options.place === 'top-left' || options.place === 'top-right') {
+    top -= _popoverNode.offsetHeight
+  }
+
+  if (options.place === 'bottom-left' || options.place === 'bottom-right') {
+    top += _node.offsetHeight
+  }
+
+  // if (options.place === 'bottom-left') {
+  //   left = left
+  // }
+
+  if (options.place === 'bottom-right') {
+    left += _node.offsetWidth - _popoverNode.offsetWidth
+  }
+
+  // if (options.place === 'top-left') {
+  //   left = left
+  // }
+
+  if (options.place === 'top-right') {
+    left += _node.offsetWidth - _popoverNode.offsetWidth
+  }
+
+  if (options.place === 'left-bottom' || options.place === 'right-bottom') {
+    top += (_node.offsetHeight - _popoverNode.offsetHeight)
+  }
+
   // 重新计算popover的高度，使其保证显示在元素中间
   if (options.place === 'left' || options.place === 'right') {
     top += (_node.offsetHeight / 2 - _popoverNode.offsetHeight / 2)
-    // top -= 16
   }
 
   // console.log(top, left, width, height)
