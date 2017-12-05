@@ -38,8 +38,12 @@ function getPopoverPosition(node, popoverNode, options = { place: 'left' }, inbo
   const clientReact = getNodeClientRect(_node)
 
   // inbody表示取元素跟body的top, left
-  let top = inbody ? clientReact.top : clientReact.top - relativeClientReact.top
-  let left = inbody ? clientReact.left : clientReact.left - relativeClientReact.left
+  let top = inbody ?
+    window.pageYOffset + clientReact.top :
+    clientReact.top - relativeClientReact.top
+  let left = inbody ?
+    window.pageXOffset + clientReact.left :
+    clientReact.left - relativeClientReact.left
 
   if (options.place === 'left' || options.place === 'left-top' || options.place === 'left-bottom') {
     left -= Number(_popoverNode.offsetWidth)
