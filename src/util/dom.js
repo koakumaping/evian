@@ -103,3 +103,39 @@ export const setStyle = (element, styleName, value) => {
     }
   }
 }
+
+/**
+* 判断是否有该attrName
+*
+* 用于判断当前attrName是否存在
+*
+* @date 2017-12-12
+* @author Ping YF (koakumaping@163.com)
+*/
+export const hasAttr = (elemet, attr) => {
+  if (elemet.hasAttributes()) {
+    const attrs = elemet.attributes
+    for (let i = attrs.length - 1; i >= 0; i--) {
+      if (attrs[i].name === attr) return true
+    }
+  }
+  return false
+}
+
+/**
+* 获取element的attrName
+*
+* 用于获取element的attrName
+*
+* @date 2017-12-12
+* @author Ping YF (koakumaping@163.com)
+*/
+export const getAttr = (elemet, attr) => {
+  if (elemet.hasAttributes()) {
+    const attrs = elemet.attributes
+    for (let i = attrs.length - 1; i >= 0; i--) {
+      if (attrs[i].name === attr) return attrs[i].value
+    }
+  }
+  return ''
+}
