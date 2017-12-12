@@ -32,6 +32,8 @@ import {
   removeClass,
   getStyle,
   setStyle,
+  hasAttr,
+  getAttr,
 } from './dom'
 
 // get
@@ -94,6 +96,8 @@ export {
   removeClass,
   getStyle,
   setStyle,
+  hasAttr,
+  getAttr,
   getWindowHeight,
   getYear,
   getMonth,
