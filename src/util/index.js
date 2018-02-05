@@ -17,6 +17,7 @@ import isObject from './isObject'
 import isBoolean from './isBoolean'
 import isString from './isString'
 import isNumber from './isNumber'
+import isMobileNumber from './isMobileNumber'
 import hasChinese from './hasChinese'
 import hasOwn from './hasOwn'
 import inOf from './inOf'
@@ -85,6 +86,7 @@ export {
   isBoolean,
   isString,
   isNumber,
+  isMobileNumber,
   hasChinese,
   clone,
   queryClone,
