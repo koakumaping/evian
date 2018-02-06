@@ -17,11 +17,11 @@ import isEmptyObject from './isEmptyObject'
 
 const isEmpty = (payload) => {
   if (payload === undefined || payload === null) return true
-  if (isArray(payload) && payload.length > 0) return true
-  if (isObject(payload) && !isEmptyObject(payload)) return true
+  if (isArray(payload) && payload.length === 0) return true
+  if (isObject(payload) && isEmptyObject(payload)) return true
   if (isString(payload) && !payload) return true
   // 数字肯定不是空
-  if (isNumber(payload)) return true
+  if (isNumber(payload)) return false
   return false
 }
 
