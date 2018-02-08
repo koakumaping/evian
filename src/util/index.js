@@ -26,6 +26,7 @@ import inOf from './inOf'
 import clone from './clone'
 import queryClone from './queryClone'
 import formatMoney from './formatMoney'
+import unique from './unique'
 
 // dom
 import {
@@ -59,6 +60,7 @@ import {
 
 // 转换
 import toNumber from './toNumber'
+import array2object from './array2object'
 
 // 数据处理，定制化
 import formatResponse from './formatResponse'
@@ -93,6 +95,7 @@ export {
   clone,
   queryClone,
   formatMoney,
+  unique,
   hasOwn,
   inOf,
   hasClass,
@@ -116,6 +119,7 @@ export {
   getYYYYMMDD,
   randomString,
   toNumber,
+  array2object,
   formatResponse,
   formatePermission,
   restoreResponse,
