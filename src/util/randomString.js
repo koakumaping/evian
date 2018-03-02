@@ -9,12 +9,13 @@
 * @author Ping YF (koakumaping@163.com)
 */
 
-const randomString = (n = 4, onlyNumber = false) => {
+const randomString = (n = 4, onlyNumber = false, useSymbol = true) => {
   // 生成n位随机数
   const num = '0123456789'
   const letter = 'abcdefghijklmnopqrstuvwxyz'
-  const symbol = '!@#$%^&*()'
+  const symbol = '!@#$^*()'
   let str = `${num}${letter}${symbol}`
+  if (!useSymbol) str = `${num}${letter}`
   if (!onlyNumber) str = num
   const arr = str.split('')
   let validate = ''
