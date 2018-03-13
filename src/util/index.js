@@ -38,10 +38,13 @@ import {
   hasAttr,
   getAttr,
 } from './dom'
+import onScrollToBottom from './onScrollToBottom'
 
 // get
-import getWindowHeight from './getWindowHeight'
 import randomString from './randomString'
+import getScrollHeight from './getScrollHeight'
+import getDocumentTop from './getDocumentTop'
+import getWindowHeight from './getWindowHeight'
 
 // date
 import {
@@ -105,7 +108,10 @@ export {
   setStyle,
   hasAttr,
   getAttr,
+  onScrollToBottom,
   getWindowHeight,
+  getScrollHeight,
+  getDocumentTop,
   getYear,
   getMonth,
   getRealMonth,
