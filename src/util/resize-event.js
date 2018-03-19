@@ -44,9 +44,9 @@ const cancelFrame = (function() {
 
 const resetTrigger = function(element) {
   const trigger = element.__resizeTrigger__;
-  const expand = trigger.firstElementChild;
+  const expand = trigger.firstElementChild || trigger.children[0] || {};
   const contract = trigger.lastElementChild;
-  const expandChild = expand.firstElementChild;
+  const expandChild = expand.firstElementChild || expand.children[0] || {};
 
   contract.scrollLeft = contract.scrollWidth;
   contract.scrollTop = contract.scrollHeight;
