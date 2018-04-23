@@ -64,6 +64,7 @@ import {
 // 转换
 import toNumber from './toNumber'
 import array2object from './array2object'
+import object2params from './object2params'
 
 // 数据处理，定制化
 import formatResponse from './formatResponse'
@@ -126,6 +127,7 @@ export {
   randomString,
   toNumber,
   array2object,
+  object2params,
   formatResponse,
   formatePermission,
   restoreResponse,
