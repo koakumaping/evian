@@ -31,6 +31,11 @@ const formatResponse = (list = [], noOrigin = false) => {
         }
         _line[item] = isNumber(list[i][item].value) ?
           Number(list[i][item].value) : list[i][item].value
+        // _开头的强制全部小写
+        if (item.indexOf('_') === 0) {
+          _line[item.toLowerCase()] = _line[item]
+          delete _line[item]
+        }
       } else {
         _line[item] = list[i][item]
       }
