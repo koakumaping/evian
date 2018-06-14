@@ -11,6 +11,7 @@
 import clone from './clone'
 import hasOwn from './hasOwn'
 import isNumber from './isNumber'
+import toNumber from './toNumber'
 
 const formatResponse = (list = [], noOrigin = false) => {
   const _list = []
@@ -29,8 +30,17 @@ const formatResponse = (list = [], noOrigin = false) => {
         if (hasOwn(list[i][item].value, 'rows')) {
           list[i][item].value.rows = formatResponse(list[i][item].value.rows, noOrigin)
         }
-        _line[item] = isNumber(list[i][item].value) ?
-          Number(list[i][item].value) : list[i][item].value
+        if (isNumber(list[i][item].value)) {
+          if (list[i][item].value.toString().length > 13) {
+            _line[item] = list[i][item].value
+          } else {
+            _line[item] = toNumber(list[i][item].value)
+          }
+        } else {
+          _line[item] = list[i][item].value
+        }
+        // _line[item] = isNumber(list[i][item].value) ?
+        //   Number(list[i][item].value) : list[i][item].value
         // _开头的强制全部小写
         if (item.indexOf('_') === 0) {
           _line[item.toLowerCase()] = _line[item]
