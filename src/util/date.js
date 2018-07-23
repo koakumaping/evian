@@ -71,6 +71,60 @@ export const getDate = (date) => {
 }
 
 /**
+* 获取小时
+*
+* 用于获取小时
+*
+* @returns Number
+*
+* @date 2018-06-26
+* @author Ping YF (koakumaping@163.com)
+*/
+export const getHours = (date) => {
+  let tmpDate = new Date()
+  if (date) {
+    tmpDate = new Date(date)
+  }
+  return tmpDate.getHours()
+}
+
+/**
+* 获取分钟
+*
+* 用于获取分钟
+*
+* @returns Number
+*
+* @date 2018-06-26
+* @author Ping YF (koakumaping@163.com)
+*/
+export const getMinutes = (date) => {
+  let tmpDate = new Date()
+  if (date) {
+    tmpDate = new Date(date)
+  }
+  return tmpDate.getMinutes()
+}
+
+/**
+* 获取秒
+*
+* 用于获取秒
+*
+* @returns Number
+*
+* @date 2018-06-26
+* @author Ping YF (koakumaping@163.com)
+*/
+export const getSeconds = (date) => {
+  let tmpDate = new Date()
+  if (date) {
+    tmpDate = new Date(date)
+  }
+  return tmpDate.getSeconds()
+}
+
+/**
 * 获取某日是星期几
 *
 * @param {Number, Number, Number} day, month, year
