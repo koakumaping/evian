@@ -19,8 +19,10 @@ const toNumber = (str, dotLength = -1, roundUp = false) => {
       _num = _num.toFixed(dotLength)
     } else {
       _num += ''
-      _num = _num.substr(0, _num.indexOf('.') + dotLength + 1)
-      if (dotLength === 0) _num = _num.replace('.', '')
+      if (_num.indexOf('.') > -1) {
+        _num = _num.substr(0, _num.indexOf('.') + dotLength + 1)
+        if (dotLength === 0) _num = _num.replace('.', '')
+      }
     }
     _num *= 1
   }
