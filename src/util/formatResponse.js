@@ -15,6 +15,7 @@ import toNumber from './toNumber'
 
 const formatResponse = (list = [], noOrigin = false) => {
   const _list = []
+  const noFormatList = ['BankCardNumber', 'Account']
   for (let i = 0, l = list.length; i < l; ++i) {
     // 创建新的一行
     const _line = {
@@ -35,6 +36,10 @@ const formatResponse = (list = [], noOrigin = false) => {
             _line[item] = list[i][item].value
           } else {
             _line[item] = toNumber(list[i][item].value)
+          }
+          if (noFormatList.indexOf(item) > -1) {
+            // 不需要转换的列表
+            _line[item] = list[i][item].value
           }
         } else {
           _line[item] = list[i][item].value
