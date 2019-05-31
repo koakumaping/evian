@@ -137,8 +137,8 @@ export const getSeconds = (date) => {
 export const getDayOfMonth = (day, month, year = new Date().getFullYear()) => {
   const tmpDate = new Date()
   tmpDate.setFullYear(year)
-  tmpDate.setMonth(month)
   tmpDate.setDate(day)
+  tmpDate.setMonth(month)
   return tmpDate.getDay()
 }
 
