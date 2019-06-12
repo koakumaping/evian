@@ -45,6 +45,8 @@ import randomString from './randomString'
 import getScrollHeight from './getScrollHeight'
 import getDocumentTop from './getDocumentTop'
 import getWindowHeight from './getWindowHeight'
+import arrayFindIndex from './arrayFindIndex'
+import arrayFind from './arrayFind'
 
 // date
 import {
@@ -141,4 +143,6 @@ export {
   restoreResponse,
   getObjectFromArray,
   getDict,
+  arrayFindIndex,
+  arrayFind,
 }
