@@ -17,6 +17,7 @@ import isObject from './isObject'
 import isBoolean from './isBoolean'
 import isString from './isString'
 import isNumber from './isNumber'
+import notNumber from './notNumber'
 import isMobileNumber from './isMobileNumber'
 import isEmpty from './isEmpty'
 import hasChinese from './hasChinese'
@@ -100,6 +101,7 @@ export {
   isBoolean,
   isString,
   isNumber,
+  notNumber,
   isMobileNumber,
   isEmpty,
   hasChinese,

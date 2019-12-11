@@ -1,6 +1,6 @@
 {
   "name": "ct-util",
-  "version": "1.0.87",
+  "version": "1.0.88",
   "description": "util",
   "main": "src/index.js",
   "repository": {
