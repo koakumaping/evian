@@ -71,6 +71,7 @@ import {
 import toNumber from './toNumber'
 import array2object from './array2object'
 import object2params from './object2params'
+import string2array from './string2array'
 import flattenify from './flattenify'
 
 // 数据处理，定制化
@@ -140,6 +141,7 @@ export {
   toNumber,
   array2object,
   object2params,
+  string2array,
   flattenify,
   formatDictionaries,
   formatResponse,
