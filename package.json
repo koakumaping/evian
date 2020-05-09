@@ -1,11 +1,11 @@
 {
-  "name": "ct-util",
+  "name": "pt-utils",
   "version": "1.0.92",
   "description": "util",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/koakumaping/ct-util.git"
+    "url": "git+https://github.com/koakumaping/pt-utils.git"
   },
   "keywords": [
     "ct"
@@ -13,7 +13,7 @@
   "author": "ping yifeng",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/koakumaping/ct-util/issues"
+    "url": "https://github.com/koakumaping/pt-utils/issues"
   },
-  "homepage": "https://github.com/koakumaping/ct-util#readme"
+  "homepage": "https://github.com/koakumaping/pt-utils#readme"
 }
