@@ -1,9 +1,10 @@
 # ct-util
+A javascript function group.
 ## install
 ```bash
-npm install ct-util
+npm install pt-utils
 ```
 ## usage
 ```javascript
-improt * as util from 'ct-util'
+improt * as utils from 'pt-utils'
 ```
