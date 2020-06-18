@@ -1,4 +1,4 @@
-# ct-util
+# pt-util
 A javascript function group.
 ## install
 ```bash
