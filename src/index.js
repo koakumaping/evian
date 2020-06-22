@@ -74,12 +74,6 @@ import object2params from './object2params'
 import string2array from './string2array'
 import flattenify from './flattenify'
 
-// 数据处理，定制化
-import formatResponse from './formatResponse'
-import formatePermission from './formatePermission'
-import formatDictionaries from './formatDictionaries'
-import restoreResponse from './restoreResponse'
-
 // 定制化函数
 import getObjectFromArray from './getObjectFromArray'
 import getDict from './getDict'
