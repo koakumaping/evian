@@ -2,7 +2,7 @@
   "name": "evian",
   "version": "2.0.0",
   "description": "A javascript function group.",
-  "main": "src/index.js",
+  "main": "src/index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/koakumaping/evian.git"
