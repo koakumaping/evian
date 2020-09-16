@@ -1,19 +1,21 @@
 {
-  "name": "pt-utils",
-  "version": "1.0.92",
-  "description": "util",
+  "name": "evian",
+  "version": "2.0.0",
+  "description": "A javascript function group.",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/koakumaping/pt-utils.git"
+    "url": "git+https://github.com/koakumaping/evian.git"
   },
   "keywords": [
-    "ct"
+    "pt",
+    "util",
+    "loadsh"
   ],
   "author": "ping yifeng",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/koakumaping/pt-utils/issues"
+    "url": "https://github.com/koakumaping/evian/issues"
   },
-  "homepage": "https://github.com/koakumaping/pt-utils#readme"
+  "homepage": "https://github.com/koakumaping/evian#readme"
 }

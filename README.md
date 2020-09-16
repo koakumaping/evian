@@ -1,10 +1,10 @@
-# pt-util
+# evian
 A javascript function group.
 ## install
 ```bash
-npm install pt-utils
+npm install evian
 ```
 ## usage
 ```javascript
-improt * as utils from 'pt-utils'
+improt * as evian from 'evian'
 ```
