@@ -5,6 +5,7 @@
 * @return {Object}     返回一个过滤过的query
 */
 import isArray from './isArray'
+import toNumber from './toNumber'
 
 export default function queryClone(query: Record<string, any>) {
   const _query: Record<string, any> = {}
@@ -14,7 +15,12 @@ export default function queryClone(query: Record<string, any>) {
         if (isArray(query[i])) {
           _query[i] = query[i].toString() + ',' // 末尾加逗号，保证数组能够被正确还原成数组
         } else {
-          _query[i] = query[i]
+          // 把字符数字转换成数字
+          if (!isNaN(Number(query[i]))) {
+            _query[i] = toNumber(query[i])
+          } else {
+            _query[i] = query[i]
+          }
         }
       }
     }
