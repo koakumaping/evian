@@ -24,6 +24,7 @@ import hasOwn from './hasOwn'
 import inOf from './inOf'
 // 操作类
 import clone from './clone'
+import queryForm from './queryForm'
 import queryClone from './queryClone'
 import formatMoney from './formatMoney'
 import unique from './unique'
@@ -96,6 +97,7 @@ export {
   isEmpty,
   hasChinese,
   clone,
+  queryForm,
   queryClone,
   formatMoney,
   unique,
