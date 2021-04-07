@@ -12,8 +12,11 @@ export default function queryForm(query: Record<string, any>) {
   for (const i in query) {
     if (Object.hasOwnProperty.call(query, i)) {
       if (!isEmpty(query[i])) {
-        // 把字符数字转换成数字
-        if (!isNaN(Number(query[i]))) {
+        if (query[i].length > 10) {
+          _query[i] = query[i]
+        } else if (query[i].toString().indexOf('0') === 0) {
+          _query[i] = query[i]
+        } else if (!isNaN(Number(query[i]))) {
           _query[i] = toNumber(query[i])
         } else {
           _query[i] = query[i]
