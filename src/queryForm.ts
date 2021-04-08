@@ -4,6 +4,7 @@
 *
 * @return {Object}     返回一个过滤过的query
 */
+import isArray from './isArray'
 import isEmpty from './isEmpty'
 import isNumber from './isNumber'
 import toNumber from './toNumber'
@@ -19,6 +20,12 @@ export default function queryForm(query: Record<string, any>) {
           _query[i] = query[i]
         } else if (isNumber(query[i])) {
           _query[i] = toNumber(query[i])
+        } else if (isArray(query[i])) {
+          try {
+            _query[i] = query[i].map(item => toNumber(item))
+          } catch (error) {
+            _query[i] = query[i]
+          }
         } else {
           _query[i] = query[i]
         }
