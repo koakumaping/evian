@@ -5,6 +5,7 @@
 * @return {Object}     返回一个过滤过的query
 */
 import isEmpty from './isEmpty'
+import isNumber from './isNumber'
 import toNumber from './toNumber'
 
 export default function queryForm(query: Record<string, any>) {
@@ -16,7 +17,7 @@ export default function queryForm(query: Record<string, any>) {
           _query[i] = query[i]
         } else if (query[i].toString().indexOf('0') === 0) {
           _query[i] = query[i]
-        } else if (!isNaN(Number(query[i]))) {
+        } else if (isNumber(query[i])) {
           _query[i] = toNumber(query[i])
         } else {
           _query[i] = query[i]
