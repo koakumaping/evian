@@ -14,7 +14,7 @@ import isArray from './isArray'
 const isNumber = (val: any) => {
   if (val === '' || val === undefined) return false
   if (isArray(val)) return false
-  return val.replace(/\s/g, '') !== '' && !isNaN(Number(val))
+  return val.toString().replace(/\s/g, '') !== '' && !isNaN(Number(val))
 }
 
 export default isNumber

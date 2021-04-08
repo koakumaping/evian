@@ -1,6 +1,6 @@
 {
   "name": "evian",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "A javascript function group.",
   "main": "src/index.ts",
   "repository": {
