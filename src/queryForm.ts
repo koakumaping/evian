@@ -22,7 +22,7 @@ export default function queryForm(query: Record<string, any>) {
           _query[i] = toNumber(query[i])
         } else if (isArray(query[i])) {
           try {
-            _query[i] = query[i].map(item => toNumber(item))
+            _query[i] = query[i].map((item: any) => isNumber(item) ? toNumber(item) : item)
           } catch (error) {
             _query[i] = query[i]
           }
