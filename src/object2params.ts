@@ -9,7 +9,7 @@
 * @author Ping YF (koakumaping@163.com)
 */
 
-const object2params = (params: Record<string, any>) => {
+const object2params = (params: Record<string, any> | void) => {
   if (params) {
     return '?' + Object.keys(params).map((key) => (
       [key, params[key]].map(window.encodeURIComponent).join('=')
