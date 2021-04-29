@@ -12,23 +12,21 @@ import toNumber from './toNumber'
 export default function queryForm(query: Record<string, any>) {
   const _query: Record<string, any> = {}
   for (const i in query) {
-    if (Object.hasOwnProperty.call(query, i)) {
-      if (!isEmpty(query[i])) {
-        if (query[i].length > 10) {
-          _query[i] = query[i]
-        } else if (query[i].toString().indexOf('0') === 0) {
-          _query[i] = query[i]
-        } else if (isNumber(query[i])) {
-          _query[i] = toNumber(query[i])
-        } else if (isArray(query[i])) {
-          try {
-            _query[i] = query[i].map((item: any) => isNumber(item) ? toNumber(item) : item)
-          } catch (error) {
-            _query[i] = query[i]
-          }
-        } else {
-          _query[i] = query[i]
-        }
+    if (isArray(query[i])) {
+      try {
+        _query[i] = query[i].map((item: any) => isNumber(item) ? toNumber(item) : item)
+      } catch (error) {
+        _query[i] = query[i]
+      }
+    } else if (!isEmpty(query[i])) {
+      if (query[i].length > 10) {
+        _query[i] = query[i]
+      } else if (query[i].toString().indexOf('0') === 0) {
+        _query[i] = query[i]
+      } else if (isNumber(query[i])) {
+        _query[i] = toNumber(query[i])
+      } else {
+        _query[i] = query[i]
       }
     }
   }
