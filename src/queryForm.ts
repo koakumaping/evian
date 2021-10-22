@@ -21,7 +21,7 @@ export default function queryForm(query: Record<string, any>) {
     } else if (!isEmpty(query[i])) {
       if (query[i].length > 10) {
         _query[i] = query[i]
-      } else if (query[i].toString().indexOf('0') === 0) {
+      } else if (query[i].toString().indexOf('0') === 0 && query[i] !== '0') {
         _query[i] = query[i]
       } else if (isNumber(query[i])) {
         _query[i] = toNumber(query[i])
