@@ -15,9 +15,8 @@ import isObject from './isObject'
 */
 export const hasClass = (elemet: HTMLElement, cls: string) => {
   const reg = new RegExp(`(\\s|^)${cls}(\\s|$)`)
-  if (elemet.className.match(reg)) {
-    return true
-  }
+  if (elemet.className.match(reg)) return true
+  return false
 }
 
 /**
@@ -61,7 +60,7 @@ export const removeClass = (elemet: HTMLElement, cls: string) => {
 * @date 2017-08-04
 * @author Ping YF (koakumaping@163.com)
 */
-export const getStyle = (element: any, styleName: any): string => {
+export const getStyle = (element: HTMLElement, styleName: any): string => {
   if (!element || !styleName) return ''
   if (styleName === 'float') {
     styleName = 'cssFloat'
@@ -69,10 +68,9 @@ export const getStyle = (element: any, styleName: any): string => {
   try {
     const computed = document.defaultView && document.defaultView.getComputedStyle(element, '')
 
-    let style = null
+    let style = ''
     if (computed) {
       style = computed[styleName]
-      console.log('ccc', styleName)
     } else {
       style = element.style[styleName]
     }

@@ -146,25 +146,6 @@ function utf8to16(str: string) {
   return out;
 }
 
-function CharToHex(str: string) {
-  var out, i, len, c, h;
-  out = "";
-  len = str.length;
-  i = 0;
-  while (i < len) {
-    c = str.charCodeAt(i++);
-    h = c.toString(16);
-    if (h.length < 2)
-      h = "0" + h;
-
-    out += "\\x" + h + " ";
-    if (i > 0 && i % 8 == 0)
-      out += "\r\n";
-  }
-
-  return out;
-}
-
 function encode64(str: string) {
   base64encode(utf16to8(str))
 }
