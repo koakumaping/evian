@@ -6,7 +6,7 @@
 * @return {Function}     返回一个“去弹跳”了的函数
 */
 
-function debounce(fn: Function, delay: number) {
+function debounce(fn: Function, delay: number): Function {
   // 定时器，用来 setTimeout
   let timer: number
   // 返回一个函数，这个函数会在一个时间区间结束后的 delay 毫秒时执行 fn 函数

@@ -6,7 +6,7 @@
 * @return {Function}     返回一个“节流”函数
 */
 
-function throttle(fn: Function, threshhold = 250) {
+function throttle(fn: Function, threshhold = 250): Function {
   // 默认间隔为 250ms
   // 记录上次执行的时间
   let last: number
