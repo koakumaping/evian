@@ -11,7 +11,7 @@
 */
 import isNumber from './isNumber'
 
-const notNumber = (val) => {
+const notNumber = (val: any) => {
   return !isNumber(val)
 }
 
